@@ -1,0 +1,6 @@
+{
+  "name": "Nuptia - Jasa Undangan Pernikahan Online",
+  "description": "Platform pembuatan undangan pernikahan online elegan dengan tema eksklusif Deep Emerald & Soft Gold, konfirmasi RSVP real-time, amplop digital, dan manajemen tamu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

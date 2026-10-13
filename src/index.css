@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  
+  --color-emerald-deep: #2D4038;
+  --color-emerald-darker: #202F29;
+  --color-cream: #F9F6EE;
+  --color-cream-card: #FFFFFF;
+  --color-gold: #B6A078;
+  --color-gold-hover: #A38C62;
+  --color-gold-light: #F4EFE6;
+  --color-gold-border: rgba(182, 160, 120, 0.4);
+  --color-text-body: #77756E;
+  --color-text-dark: #2D4038;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    background-color: #F9F6EE;
+    color: #2D4038;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Arch Frame helper */
+.arch-frame {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.arch-window {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+/* Subtle gold luxury divider */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #B6A078, transparent);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F9F6EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #B6A078;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2D4038;
+}
+
+/* Smooth motion respects user preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
